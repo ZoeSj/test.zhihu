@@ -35,3 +35,14 @@ HEAD is now at ea34578 add distributed
 $ git reset --hard ea34578d5496d7dd233c827ed32a8cd576c5ee85^
 HEAD is now at ea34578 add distributed
 ```
+
+#### 工作区和暂存区
+工作区：Working Directory
+which in your local computer. 
+版本库：Repository
+the working directory have a hide directory(.git),but this is not working directory,it's Git's Repository.
+there are lots of things in the Git's repository,the most important is stage(index),and Git build a branch master automatically for us,and point to master called HEAD.
+
+there are two steps add files to the repository:
+first step: git add == add change to the stage;
+second step:git commit == put the content of stage to the current branch.
