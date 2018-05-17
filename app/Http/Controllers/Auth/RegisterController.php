@@ -81,7 +81,6 @@ class RegisterController extends Controller
             'name'=>$user->name
             ];
         $template = new SendCloudTemplate('welcome', $data);
-
         Mail::raw($template, function ($message) use ($user){
             $message->from('shengjiamo@163.com', 'Laravel');
             $message->to($user->email);
