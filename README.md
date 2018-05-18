@@ -46,3 +46,5 @@ there are lots of things in the Git's repository,the most important is stage(ind
 there are two steps add files to the repository:
 first step: git add == add change to the stage;
 second step:git commit == put the content of stage to the current branch.
+
+when we create Git Repository,Git automatically create a only branch master.
