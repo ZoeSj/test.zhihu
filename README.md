@@ -105,6 +105,10 @@ Fast-forward
 删除分支：git branch -d <name>
 ```
 
-#### 解决冲突
-test
+#### [解决冲突](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840202368c74be33fbd884e71b570f2cc3c0d1dcf000)
+**git log --graph**查看分支合并图
 
+#### 分支管理策略
+通常，合并分支时，如果可能，git会用fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+如果要强制禁用fast forward模式，git会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+"--no-ff"
