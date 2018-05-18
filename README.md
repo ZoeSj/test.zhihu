@@ -48,3 +48,14 @@ first step: git add == add change to the stage;
 second step:git commit == put the content of stage to the current branch.
 
 when we create Git Repository,Git automatically create a only branch master.
+
+#### 管理修改
+now we want to discuss why the git is more popular than other version control system design,because what the git track and manage is the changes,not files.
+
+#### 撤销修改
+**git checkout -- file** can back to the last change
+意思就是把这个文件在工作区的需改全部撤销，这里有两种情况：
+一种是readme.txt自修改后还没有被放到stage，现在，撤销修改就会到和版本库一模一样的状态；
+一种是readme.txt已经添加到stage后，又作了修改，现在，撤销修改就回到添加到暂存区的状态。
+总之，就是让这个文件回到最近一次git commit or git add 时的状态。
+
