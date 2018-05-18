@@ -91,7 +91,7 @@ Fast-forward
  readme.txt |    1 +
  1 file changed, 1 insertion(+)
 ```
-上面的Fast-forward信息，git告诉我妈，这次合并是"快进模式"，也就是直接把master指向dev的当前提交，
+上面的Fast-forward信息，git告诉我们，这次合并是"快进模式"，也就是直接把master指向dev的当前提交，
 **git branch -d dev** 删除分支
 
 
