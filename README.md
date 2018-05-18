@@ -122,6 +122,7 @@ Fast-forward
 这里git提供了**git stash**，可以把当前工作现场"储藏"起来，等以后回复现场后继续工作。
 
 **git stash list** 查看刚刚的工作现场
+
 how to recover the content of stash?
 1:use **git stash apply**recover,but after recover,the content of stash still have,you need to use **git stash drop**delete.
 2:**git stash pop**,stash content was also deleted at the same time.
