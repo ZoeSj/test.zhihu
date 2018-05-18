@@ -62,3 +62,36 @@ now we want to discuss why the git is more popular than other version control sy
 #### 删除文件
 in Git,delete = change.
 **git rm**delete file from repository.if the file push in repository,don't worry,but need to be careful,you just recover the latest version,and you may lost the last change.
+
+### 远程仓库
+**git push**
+
+**git push (-u) origin master**
+
+**git remote add origin git@server-name:path/repo-name.git**:关联一个远程库
+
+#### clone form remote repository
+**git clone**
+
+#### branch 
+**git checkout -b dev** Switched to a new branch 'dev'
+
+==
+```
+**git branch dev** 
+**git checkout dev**
+```
+**git branch** 查看当前分支
+**git merge dev**把dev分支的工作成功合并到master上
+**git merge**用于合并指定分支到当前分支，合并后，就可以看到和dev提交的是一样的。
+```
+$ git merge dev
+Updating d17efd8..fec145a
+Fast-forward
+ readme.txt |    1 +
+ 1 file changed, 1 insertion(+)
+```
+上面的Fast-forward信息，git告诉我妈，这次合并是"快进模式"，也就是直接把master指向dev的当前提交，
+**git branch -d dev** 删除分支
+
+
