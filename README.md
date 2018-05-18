@@ -126,3 +126,39 @@ Fast-forward
 how to recover the content of stash?
 1:use **git stash apply**recover,but after recover,the content of stash still have,you need to use **git stash drop**delete.
 2:**git stash pop**,stash content was also deleted at the same time.
+
+
+#### 强行删除
+当遇到新功能取消时，新建的分支必须销毁：
+**git branch -d feature-vulcan**
+销毁失败：
+**git branch -D feature-vulcan**：强行删除
+
+
+#### 多人协作
+**git remote （-v**  查看远程库的信息
+**git push origin master**推送分支
+**git pull**
+
+
+#### 标签
+**git tag <name>**
+
+注意，标签不是按时间顺序列出，而是按字母排序的。可以用 **git show <tagname>** 查看标签信息：
+
+**git tag -a <tagname> -m "blablabla..."** 可以指定标签信息；
+
+**git tag -s <tagname> -m "blablabla..."** 可以用PGP签名标签；
+
+命令**git tag** 可以查看所有标签
+
+推送某个标签到远程，使用命令**git push origin <tagname>**
+
+命令**git push origin <tagname>** 可以推送一个本地标签；
+
+命令**git push origin --tags** 可以推送全部未推送过的本地标签；
+
+命令**git tag -d <tagname>** 可以删除一个本地标签；
+
+命令**git push origin :refs/tags/<tagname>** 可以删除一个远程标签。
+
