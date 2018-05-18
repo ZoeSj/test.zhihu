@@ -111,6 +111,17 @@ Fast-forward
 #### 分支管理策略
 通常，合并分支时，如果可能，git会用fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
 如果要强制禁用fast forward模式，git会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
-"--no-ff"
+"--no-ff"合并时，加上"--no-ff"参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过分支，而fast forward合并就看不出来曾经做过合并。
 
+在实际开发中，应该按照几个基本原则进行分支管理：
+首先：master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活。
 
+#### Bug分支
+开发中，出现bug怎么办？如何修复？
+当遇到一个修复代号101的bug的任务时2，很自然的，想创建一个分支issue-101来修复它，但是当前正在dev上进行的工作还没有提交，工作到一半，没法提交，可是bug必须马上要修复，how？
+这里git提供了**git stash**，可以把当前工作现场"储藏"起来，等以后回复现场后继续工作。
+
+**git stash list** 查看刚刚的工作现场
+how to recover the content of stash?
+1:use **git stash apply**recover,but after recover,the content of stash still have,you need to use **git stash drop**delete.
+2:**git stash pop**,stash content was also deleted at the same time.
