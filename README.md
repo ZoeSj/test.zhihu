@@ -59,3 +59,6 @@ now we want to discuss why the git is more popular than other version control sy
 一种是readme.txt已经添加到stage后，又作了修改，现在，撤销修改就回到添加到暂存区的状态。
 总之，就是让这个文件回到最近一次git commit or git add 时的状态。
 
+#### 删除文件
+in Git,delete = change.
+**git rm**delete file from repository.if the file push in repository,don't worry,but need to be careful,you just recover the latest version,and you may lost the last change.
