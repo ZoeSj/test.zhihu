@@ -14,7 +14,15 @@
                             </div>
                         @endif
                         <!-- 编辑器容器 -->
-                            <script id="container" name="body" type="text/plain"></script>
+                            <form action="/questions" method="post">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label for="title">标题</label>
+                                    <input type="text" name="title" class="form-control" placeholder="标题" id="title">
+                                </div>
+                                <script id="container" name="body" type="text/plain"></script>
+                                <button class="btn btn-success pull-right" type="submit">发布问题</button>
+                            </form>
                     </div>
                 </div>
             </div>

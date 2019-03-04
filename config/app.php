@@ -166,6 +166,7 @@ return [
         Naux\Mail\SendCloudServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Overtrue\LaravelUEditor\UEditorServiceProvider::class,
+        Overtrue\LaravelFilesystem\Qiniu\QiniuStorageServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -229,6 +230,18 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+    ],
+
+    'disks' => [
+        //...
+        'qiniu' => [
+            'driver'     => 'qiniu',
+            'access_key' => env('QINIU_ACCESS_KEY', 'xxxxxxxxxxxxxxxx'),
+            'secret_key' => env('QINIU_SECRET_KEY', 'xxxxxxxxxxxxxxxx'),
+            'bucket'     => env('QINIU_BUCKET', 'test'),
+            'domain'     => env('QINIU_DOMAIN', 'xxx.clouddn.com'), // or host: https://xxxx.clouddn.com
+        ],
+        //...
     ],
 
 ];

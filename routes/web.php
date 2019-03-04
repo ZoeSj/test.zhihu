@@ -26,6 +26,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('questions','QuestionsController',['names'=>[
-    'create'=>'question.create'
-]]);
+Route::resource('questions','QuestionsController',
+    ['names'=>[
+        'create'=>'question.create',
+        'show'=>'question.show',
+        ]
+    ]
+);

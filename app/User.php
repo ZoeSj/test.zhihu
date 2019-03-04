@@ -34,6 +34,9 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    /**
+     * @param $token
+     */
     public function sendPasswordResetNotification($token)
     {
         // 模板变量
